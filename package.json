@@ -12,7 +12,7 @@
     "naivecoin": "bin/naivecoin.js"
   },
   "scripts": {
-    "start": "node bin/naivecoin.js",
+    "start": "node bin/naivecoin.js --host 0.0.0.0",
     "compose:up": "docker-compose up",
     "coveralls": "nyc npm test && nyc report --reporter=text-lcov | coveralls",
     "coverage": "nyc --reporter=lcov --reporter=text --clean node node_modules/mocha/bin/_mocha -u bdd --colors test/",
