@@ -6,5 +6,4 @@ RUN npm install
 
 COPY . /app
 
-CMD ["npm", "start"]
-
+CMD ["node", "bin/naivecoin.js", "-p", "80"]
