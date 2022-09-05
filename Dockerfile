@@ -1,9 +1,10 @@
 FROM node:6
+WORKDIR /app
 
-VOLUME /naivecoin
+COPY ./package.json /app/package.json
+RUN npm install
 
-WORKDIR /naivecoin
+COPY . /app
 
-ENTRYPOINT node bin/naivecoin.js
+CMD ["npm", "start"]
 
-EXPOSE 3001
