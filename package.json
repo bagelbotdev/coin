@@ -9,7 +9,8 @@
     "url": "https://github.com/conradoqg/naivecoin.git"
   },
   "bin": {
-    "naivecoin": "bin/naivecoin.js"
+    "naivecoin": "bin/naivecoin.js",
+    "remine": "bin/remine.js"
   },
   "scripts": {
     "start": "node bin/naivecoin.js --host bryxcoin01.csh.rit.edu -p 80",
