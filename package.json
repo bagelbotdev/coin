@@ -1,24 +1,16 @@
 {
-  "name": "naivecoin",
-  "version": "0.0.2",
-  "description": "BryxCoin",
-  "homepage": "https://github.com/conradoqg/naivecoin",
+  "name": "bryxcoin",
+  "version": "1.0.0",
+  "description": "bryxcoin node server",
+  "homepage": "https://github.com/bagelbotdev/coin",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/conradoqg/naivecoin.git"
+    "url": "https://github.com/bagelbotdev/coin"
   },
   "bin": {
     "bryxcoin": "bin/bryxcoin.js",
     "remine": "bin/remine.js"
-  },
-  "scripts": {
-    "start": "node bin/naivecoin.js --host bryxcoin01.csh.rit.edu -p 80",
-    "compose:up": "docker-compose up",
-    "coveralls": "nyc npm test && nyc report --reporter=text-lcov | coveralls",
-    "coverage": "nyc --reporter=lcov --reporter=text --clean node node_modules/mocha/bin/_mocha -u bdd --colors test/",
-    "test": "_mocha -u bdd --colors test/",
-    "diagrams": "mmdc -i doc/blockchain.mmd -o doc/blockchain.png -b transparent && mmdc -i doc/components.mmd -o doc/components.png -b transparent"
   },
   "dependencies": {
     "body-parser": "^1.17.1",
