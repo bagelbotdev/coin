@@ -3,10 +3,16 @@ const bryxcoin = require('./../lib/bryxcoin');
 
 const argv = require('yargs')
     .usage('Usage: $0 [options]')
+    .alias('s', 'secret')
+    .describe('s', 'Identity Secret (found with /identity in bagel channel)')
+    .alias('t', 'token')
+    .describe('t', 'Identity Token (found with /identity in bagel channel)')
+    .demandOption('s')
+    .demandOption('t')
     .alias('a', 'host')
     .describe('a', 'Host address. (localhost by default)')
     .alias('p', 'port')
-    .describe('p', 'HTTP port. (3001 by default)')
+    .describe('p', 'HTTP port. (80 by default)')
     .alias('l', 'log-level')
     .describe('l', 'Log level (7=dir, debug, time and trace; 6=log and info; 4=warn; 3=error, assert; 6 by default).')
     .describe('peers', 'Peers list.')
@@ -16,4 +22,4 @@ const argv = require('yargs')
     .alias('h', 'help')
     .argv;
 
-bryxcoin(argv.host, argv.port, argv.peers, argv.logLevel, argv.name);
+bryxcoin(argv.host, argv.port, argv.peers, argv.logLevel, argv.name, { token: argv.token, secret: argv.secret });
