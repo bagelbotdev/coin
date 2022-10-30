@@ -1,8 +1,8 @@
-FROM node:latest
+FROM node:18
 WORKDIR /app
 
 COPY ./package.json /app/package.json
-RUN npm install
+RUN yarn install
 RUN mkdir /app/data
 RUN chmod -R a+rw /app/data
 
